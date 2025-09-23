@@ -1,27 +1,26 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% extends "master.html" %}
+    <title>My Tennis Club</title>
 
-    {% block title %}
-        My Tennis Club
-    {% endblock %}
+    <style>
+        body {
+            background-image: url("{% static 'images/tom.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
 <body>
-
-    
-
-
-    {% block content %}
     <h1>My Tennis Club</h1>
 
     <h3>Members</h3>
-    
+
     <p>Check out all our <a href="home/">members</a></p>
-    
-    {% endblock %}
-        
 </body>
 </html>

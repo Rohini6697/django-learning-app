@@ -1,23 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     {% extends "master.html" %}
+    {% load static %}
 
     {% block title %}
         Details about {{ mymember.firstname }} {{ mymember.lastname }}
     {% endblock %}
-</head>
-<body>
-    
-    <hr>
+
     {% block content%}
-        <h2>{{mymember.firstname}} {{mymember.lastname}}</h2>
+        <img class="cat" src="{% static 'images/cat.jpg' %}"/>
+        <h2>Name :{{mymember.firstname}} {{mymember.lastname}}</h2>
         <h4>phone no : {{mymember.phone}}</h4>
         <h4>member since : {{mymember.joined_date}}</h4>
+       
+ 
 
-        <h3>back to <a href="/home">Members</a></h3>
+
+        <h3 class="hey">back to <a href="/home">Members</a></h3>
     {%endblock%}
-</body>
-</html>
+
+    

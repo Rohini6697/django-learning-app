@@ -1,0 +1,17 @@
+body{
+    background-color: cornflowerblue;
+    color: lime;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.hey{
+    background-color: azure;
+}
+.cat{
+    width: 160px;
+    border-radius: 50%;
+    border: 5px solid violet;
+
+}
