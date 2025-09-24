@@ -1,0 +1,20 @@
+
+    {% extends "master.html" %}
+    {% load static %}
+
+
+    {% block title %}
+        My Tennis Club - List of all members
+    {% endblock %}    
+
+    {% block content %}
+        <form method="post" action="{% url 'addrecord' %}">
+            {% csrf_token %}
+            <label for="fname">First name</label>
+            <input type="text" placeholder="firstname" name="fname"/><br><br>
+            <label for="lname">Last name</label>
+            <input type=" text" placeholder="lastname" name="lname"/><br><br>
+            <button>Submit</button>
+            
+        </form>
+    {% endblock %}

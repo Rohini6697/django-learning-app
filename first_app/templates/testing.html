@@ -1,0 +1,16 @@
+
+    {% extends "master.html" %}
+    {% load static %}
+
+
+    {% block title %}
+        My Tennis Club - List of all members
+    {% endblock %}    
+
+    {% block content %}
+        <ul>
+            {% for x in fruits %}
+                <h1>{{x}}</h1>
+            {% endfor %}
+        </ul>
+    {% endblock %}

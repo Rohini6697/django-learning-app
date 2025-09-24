@@ -10,7 +10,12 @@
     {% block content %}
         <ul>
             {% for x in person %}
-                <li><a href="details/{{x.id}}">{{x.firstname}} {{x.lastname}}</a></li>
+                <li><a href="details/{{x.id}}">{{x.firstname}} {{x.lastname}}</a>
+                    <a href="{% url 'deleterecord' x.id %}" onclick="return confirm('do you wanned to delete {{x.firstname}}')">delete</a>
+                    <a href="{% url 'update' x.id %}">update</a>
+                </li>
+                
             {% endfor %}
         </ul>
+        <a href="add">Add a new Person</a>
     {% endblock %}
